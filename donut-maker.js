@@ -33,6 +33,7 @@ class DonutMaker {
     } else {
         this.donutCount += (Math.pow(1.2, this.donutMultiplierCount));
     }
+}
 
     buyAutoClicker() {
         if (this.donutCount >= this.autoClickerPrice) {
@@ -46,7 +47,7 @@ class DonutMaker {
         if (this.autoClickerCount > 0 && this.donutMultiplierCount === 0) {
             this.donutCount += this.autoClickerCount;
         } else if (this.autoClickerCount > 0 && this.donutMultiplierCount > 0) {
-            this.donutCount += this.autoClickerCount * (Math.pow(1.2, this.donutMultiplierCount));
+            (this.donutCount += this.autoClickerCount) * (Math.pow(1.2, this.donutMultiplierCount));
         }
     }
 

@@ -8,39 +8,63 @@
   </head>
   <header>
     <nav>
-      <p>About Fred the Baker Baking Company</p>
-      <p>Inspiration for Game: Cookie Clicker</p>
-      <p>Contact Information</p>
+      <button id="about">About Fred the Baker Baking Company</button>
+      <div id="aboutModal" class="modal"></div>
+      <div class="aboutModalContent">
+        <span class="closeAbout">x</span>
+        <p>Fred uhh....well. Let's just say Fred is totally his real name. And don't ask where he's from. Moving on...</p>
+      </div>
+      
+      <button id="inspiration">Inspiration for Game: Cookie Clicker</button>
+      <div id="inspirationModal" class="modal"></div>
+      <div class="inspirationModalContent">
+        <span class="closeInspiration">x</span>
+        <p>The inspiration for this game was Cookie Clicker: <a href="https://orteil.dashnet.org/cookieclicker/"></a>. Which is great for boring Zoom meetings.</p>
+      </div>
+
+      <button id="contact">Contact Information</button>
+      <div id="contactModal" class="modal"></div>
+      <div class="contactModalContent">
+        <span class="closeContact">x</span>
+        <p>This game was developed by yours truly, Brady Gasser</p>
+        <p>GitHub Link: <a href="https://github.com/bradymgasser"></a></p>
+        <P>Personal Portfolio: <a href="https://bradymgasser.github.io/"></a></p>
+      </div>
     </nav>
   </header>
   <body>
-    <div class="container">
 
     <main>
 
-    <section class = "DonutMaker">
+    <div class = "container">
+
+    <section id = "donutMakerDisplay">
       <h2>Donut Maker</h2>
-      <button id="donutMaker">CLICK!</button>
-      <p>Number of Donuts Made: </p>
+      <button id="donutMakerBtn">Make tha donnuts</button>
+      <h3>Number of Donuts Made:<span id="donutCounterGameDisplay">0</span></h3>
     </section>
 
-    <section class = "AutoClicker">
+    <section id = "autoClickerDisplay">
       <h2>Auto Clickers</h2>
-      <button id="buyAuto">Buy Auto Clicker!</button>
-      <p>Number of Auto Clickers Activated: </p>
+      <button id="buyAutoClickerBtn">Buy Auto Clicker!</button>
+      <h3>Number of Auto Clickers Activated: <span id="autoClickerGameCounter">0</span> </h3>
+      <h3>Auto Clicker Price: <span id="autoClickerGamePrice">100</span></h3>
     </section>
 
-    <section class = "DonutMultipliers">
+    <section id = "DonutMultipliers">
       <h2>Donut Multipliers</h2>
-      <button id="buyMulti">Buy Donut Multiplier!</button>
-      <p>Number of Donut Multipliers Activated: </p>
+      <button id="buyDonutMultiBtn">Buy Donut Multiplier!</button>
+      <h3>Number of Donut Multipliers: <span id="donutMultiGameCounter">0</span></h3>
+      <h3>Donut Multiplier Price: <span id="donutMultiGamePrice">10</span></h3>
     </section>
 
+    <section id = "resetGame">
+      <h2>Reset Game</h2>
+      <button id="resetGameToZeroBtn">Reset</button>
+    </section>
 
-
-    <script src="./index.js"></script>
-
-    </main>
     </div>
+    </main>
+    <script src="./donut-maker-app.js"></script>
   </body>
 </html>
