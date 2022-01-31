@@ -1,10 +1,12 @@
+const newDonutCount = document.querySelector('.newDonutCount');
+
 class DonutMaker {
-    constructor(donutCount, autoClickerCount, autoClickerPrice, donutMultiplierCount, donutMultiplierPrice) {
+    constructor() {
         this.donutCount = 0;
         this.autoClickerCount = 0;
         this.autoClickerPrice = 100;
-        this.donutMultiplierCount = 0;
-        this.donutMultiplierPrice = 10;
+        this.donutMultiplierCount = 1;
+        this.donutMultiplierPrice = 0;
     }
 
     getDounutCount() {
@@ -20,56 +22,50 @@ class DonutMaker {
     }
 
     getDonutMultiplierCount() {
-        return this.getDonutMultiplierCount;
+        return this.DonutMultiplierCount;
     }
 
     getDonutMultiplierPrice() {
-        return this.getDonutMultiplierPrice;
+        return this.DonutMultiplierPrice;
     }
 
     click() {
-        if (this.donutMultiplierCount === 0 && this.autoClickerCount === 0){
-        this.donutCount +1;
-    } else {
-        this.donutCount += (this.autoClickerCount * 1) += (Math.pow(1.2, this.donutMultiplierCount));
-        this.donutCount = Math.round(this.donutCount);
-    }
-}
-
-    buyAutoClicker() {
-        if (this.donutCount >= this.autoClickerPrice) {
-            this.donutCount -= this.autoClickerPrice;
-            this.autoClickerPrice += (autoClickerPrice * .1)
-            this.autoClickerPrice = Math.round(this.autoClickerPrice);
-        }
-    }
-
-    activateAutoClickers() {
-        if (this.autoClickerCount > 0 && this.donutMultiplierCount === 0) {
-            setInterval(() => {
-            this.donutCount += this.autoClickerCount;
-        }, 1000);
-        } else if (this.autoClickerCount > 0 && this.donutMultiplierCount > 0) {
-            setInterval(() => {
-            (this.donutCount += this.autoClickerCount) * (Math.pow(1.2, this.donutMultiplierCount));
-        }, 1000);
-        }
+        this.donutMultiplierCount = this.donutMultiplierCount * 1;
+        this.donutCount += this.donutMultiplierCount;
     }
 
     buyDonutMultiplier() {
         if (this.donutCount >= this.donutMultiplierPrice) {
-            this.donutCount = Math.round(this.donutCount -= this.donutMultiplierPrice);
+            this.donutCount -= this.donutMultiplierPrice;
             this.donutMultiplierCount += 1;
-            this.donutMultiplierPrice = Math.round(this.donutMultiplierPrice += donutMultiplierPrice * .1);
+            this.donutMultiplierPrice += (this.donutMultiplierPrice * 1);
+        }
+    }   
+
+    buyAutoClicker() {
+        if (this.donutCount >= this.autoClickerPrice) {
+            this.donutCount -= this.autoClickerPrice;
+            this.autoClickerCount += 1;
+            this.autoClickerPrice += (autoClickerPrice * .1);
         }
     }
 
-    roundDonutCount() {
-        this.donutGameCount.innterText = Math.round(this.donutCount);
+    activateAutoClickers() {
+         if (this.autoClickerCount > 0) {
+             setInterval(() => {
+                 this.donutCount += this.donutMultiplierCount * this.autoClickerCount;
+                 this.donutCount += this.autoClickerCount * 1;
+                 newDonutCount.innerText = this.getDounutCount();
+             }, 1000);
+         }
     }
+
+    updateDonutCount() {
+        newDonutCount.innerText = Math.round(this.donutCount);
+    }
+
     reset() {
         location.reload;
     }
-    }
-
+}
 export default DonutMaker;
