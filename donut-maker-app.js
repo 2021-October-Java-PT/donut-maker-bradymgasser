@@ -1,6 +1,8 @@
 import DonutMaker from './donut-maker.js'
 
-renderPage()
+const 
+
+renderPage();
 
 function renderPage() {
     makeDonut();
@@ -36,6 +38,7 @@ function makeDonut() {
 
     })
 
+
     buyDonutMultiBtn.addEventListener("click", () => {
         theBigDonutMaker.buyDonutMultiplier();
         donutMultiGameCounter.innerText = theBigDonutMaker.donutMultiplierCount
@@ -45,8 +48,6 @@ function makeDonut() {
     resetGameToZeroBtn.addEventListener("click", () => {
         theBigDonutMaker.reset();
     })
-
-
 }
 
 var modalA = document.getElementById("aboutModal");
