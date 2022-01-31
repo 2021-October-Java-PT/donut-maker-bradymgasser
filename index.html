@@ -8,9 +8,28 @@
   </head>
   <header>
     <nav>
-      <p>About Fred the Baker Baking Company</p>
-      <p>Inspiration for Game: Cookie Clicker</p>
-      <p>Contact Information</p>
+      <button id="about">About Fred the Baker Baking Company</button>
+      <div id="aboutModal" class="modal"></div>
+      <div class="aboutModalContent">
+        <span class="closeAbout">x</span>
+        <p>Fred uhh....well. Let's just say Fred is totally his real name. And don't ask where he's from. Moving on...</p>
+      </div>
+      
+      <button id="inspiration">Inspiration for Game: Cookie Clicker</button>
+      <div id="inspirationModal" class="modal"></div>
+      <div class="inspirationModalContent">
+        <span class="closeInspiration">x</span>
+        <p>The inspiration for this game was Cookie Clicker: <a href="https://orteil.dashnet.org/cookieclicker/"></a>. Which is great for boring Zoom meetings.</p>
+      </div>
+
+      <button id="contact">Contact Information</button>
+      <div id="contactModal" class="modal"></div>
+      <div class="contactModalContent">
+        <span class="closeContact">x</span>
+        <p>This game was developed by yours truly, Brady Gasser</p>
+        <p>GitHub Link: <a href="https://github.com/bradymgasser"></a></p>
+        <P>Personal Portfolio: <a href="https://bradymgasser.github.io/"></a></p>
+      </div>
     </nav>
   </header>
   <body>
@@ -43,6 +62,7 @@
       <h2>Reset Game</h2>
       <button id="resetGameToZeroBtn">Reset</button>
     </section>
+
     </div>
 
     <script src="./donut-maker-app.js"></script>
