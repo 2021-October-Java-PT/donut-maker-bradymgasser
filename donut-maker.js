@@ -1,7 +1,13 @@
 // const newDonutCountDisplay = document.querySelector('.newDonutCountDisplay');
 
 class DonutMaker {
-    constructor(dountCount, autoClickerCount, autoClickerPrice, donutMultiplierCount, donutMultiplierPrice) {
+    constructor(
+        dountCount,
+        autoClickerCount,
+        autoClickerPrice,
+        donutMultiplierCount,
+        donutMultiplierPrice
+        ) {
         this.donutCount = donutCount;
         this.autoClickerCount = autoClickerCount;
         this.autoClickerPrice = autoClickerPrice;
@@ -58,10 +64,14 @@ class DonutMaker {
     activateAutoClickers() {
          if (this.autoClickerCount > 0) {
              setInterval(() => {
-                 this.donutCount += this.donutMultiplierCount * this.autoClickerCount;
-                 this.donutCount += this.autoClickerCount * 1;
-                 newDonutCount.innerText = this.getDounutCount();
-             }, 1000);
+                if (this.donutMultiplierCount === 0) {
+                    this.donutCount += 1;
+            }
+            else {
+                this.donutCount += Math.pow(1.2, this.donutMultiplierCount);
+                this.donutCount = Math.round(this.donutCount);
+             }
+            }, 1000);
          }
     }
 
