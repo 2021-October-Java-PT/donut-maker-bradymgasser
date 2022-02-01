@@ -8,34 +8,36 @@ function renderPage() {
 
 function makeDonut() {
 
-    const donutMakerBtn = document.querySelector('.donutMakerBtn');
-    const buyAutoClickerBtn = document.querySelector('.buyAutoClickerBtn');
-    const buyDonutMultiBtn = document.querySelector('.buyDonutMultiBtn');
-    const resetGameToZeroBtn = document.querySelector('.resetGameToZeroBtn');
-    const autoClickerGameCounter = document.querySelector('.autoClickerGameCounter');
-    const autoClickerGamePrice = document.querySelector('.autoClickerGamePrice');
-    const donutMultiGameCounter = document.querySelector('.donutMultiGameCounter');
-    const donutMultiGamePrice = document.querySelector('.donutMultiGamePrice');
+    const donutMakerBtn = document.querySelector('#donutMakerBtn');
+    const newDonutCountDisplay = document.querySelector('#newDonutCountDisplay');
+    const buyAutoClickerBtn = document.querySelector('#buyAutoClickerBtn');
+    const buyDonutMultiBtn = document.querySelector('#buyDonutMultiBtn');
+    const resetGameToZeroBtn = document.querySelector('#resetGameToZeroBtn');
+    const autoClickerGameCounter = document.querySelector('#autoClickerGameCounter');
+    const autoClickerGamePrice = document.querySelector('#autoClickerGamePrice');
+    const donutMultiGameCounter = document.querySelector('#donutMultiGameCounter');
+    const donutMultiGamePrice = document.querySelector('#donutMultiGamePrice');
 
-    const theBigDonutMaker = new DonutMaker(0, 0, 100, 0, 10);
+    const theBigDonutMaker = new DonutMaker(0, 0, 0, 0, 0);
 
 
 
     donutMakerBtn.addEventListener("click", () => {
         theBigDonutMaker.click();
-        theBigDonutMaker.updateDonutCount();
+        // theBigDonutMaker.updateDonutCount();
+        newDonutCountDisplay.innerText = Math.round(theBigDonutMaker.donutCount)
     });
 
     buyDonutMultiBtn.addEventListener("click", () => {
         theBigDonutMaker.buyDonutMultiplier();
-        theBigDonutMaker.updateDonutCount();
+        // theBigDonutMaker.updateDonutCount();
         donutMultiGameCounter.innerText = theBigDonutMaker.donutMultiplierCount;
         donutMultiGamePrice.innerText = theBigDonutMaker.donutMultiplierPrice;
     });
 
     buyAutoClickerBtn.addEventListener("click", () => {
         theBigDonutMaker.buyAutoClicker();
-        theBigDonutMaker.updateDonutCount();
+        // theBigDonutMaker.updateDonutCount();
         theBigDonutMaker.activateAutoClickers();
         autoClickerGameCounter.innerText = theBigDonutMaker.autoClickerCount;
         autoClickerGamePrice.innterText = theBigDonutMaker.autoClickerPrice;
