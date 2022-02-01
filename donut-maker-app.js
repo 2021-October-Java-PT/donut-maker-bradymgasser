@@ -50,57 +50,57 @@ function makeDonut() {
     });
 }
 
-var modalA = document.getElementById("aboutModal");
-var btnA = document.getElementById("about");
-var spanA = document.getElementsByClassName("closeAbout")[0];
+var modal = document.getElementById("aboutModal");
+var btn = document.getElementById("about");
+var span = document.getElementsByClassName("closeAbout")[0];
 
-btnA.onclick = function () {
-    modalA.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 };
 
-spanA.onclick = function () {
-    modalA.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 };
 
 window.onclick = function (event) {
-    if (event.target == modalA) {
-        modalA.style.display = "none";
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 };
 
 
-var modalI = document.getElementById("inspirationModal");
-var btnI = document.getElementById("inspiration");
-var spanI = document.getElementsByClassName("closeInspiration")[0];
+var modal2 = document.getElementById("inspirationModal");
+var btn2 = document.getElementById("inspiration");
+var span2 = document.getElementsByClassName("closeInspiration")[0];
 
-btnI.onclick = function () {
-    modalI.style.display = "block";
+btn2.onclick = function () {
+    modal2.style.display = "block";
 };
 
-spanI.onclick = function () {
-    modalI.style.display = "none";
+span2.onclick = function () {
+    modal2.style.display = "none";
 };
 
 window.onclick = function (event) {
-    if (event.target == modalI) {
-        modalI.style.display = "none";
+    if (event.target == modal2) {
+        modal2.style.display = "none";
     }
 };
 
-var modalC = document.getElementById("contactModal");
-var btnC = document.getElementById("contact");
-var spanC = document.getElementsByClassName("closeContact")[0];
+var modal3 = document.getElementById("contactModal");
+var btn3 = document.getElementById("contact");
+var span3 = document.getElementsByClassName("closeContact")[0];
 
-btnC.onclick = function () {
-    modalC.style.display = "block";
+btn3.onclick = function () {
+    modal3.style.display = "block";
 };
 
-spanC.onlick = function () {
-    modalC.style.display = "none";
+span3.onlick = function () {
+    modal3.style.display = "none";
 };
 
 window.onclick = function (event) {
-    if (event.target == modalC) {
-        modalC.style.display = "none";
+    if (event.target == modal3) {
+        modal3.style.display = "none";
     }
 };

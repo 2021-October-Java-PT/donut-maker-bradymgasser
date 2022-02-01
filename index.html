@@ -5,42 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="style.css">
   </head>
+
+
+  <body>
+
+
   <header>
     <nav>
-      <button id="about">About Fred the Baker Baking Company</button>
-      <div id="aboutModal" class="modal"></div>
-      <div class="aboutModalContent">
-        <span class="closeAbout">x</span>
-        <p>Fred uhh....well. Let's just say Fred is totally his real name. And don't ask where he's from. Moving on...</p>
+      <button id="about">About</button>
+      <div id="aboutModal" class="modal">
+        <div class="aboutModalContent">
+          <span class="closeAbout">&times;</span>
+          <p>Welcome to Fred's Bakery! Where you do all the work! And your name ain't Fred!</p>
+          <p>Fred uhh....well. Just don't ask where he's from. Moving on...</p>
       </div>
-      
-      <button id="inspiration">Inspiration for Game: Cookie Clicker</button>
-      <div id="inspirationModal" class="modal"></div>
-      <div class="inspirationModalContent">
-        <span class="closeInspiration">x</span>
-        <p>The inspiration for this game was Cookie Clicker: <a href="https://orteil.dashnet.org/cookieclicker/"></a>. Which is great for boring Zoom meetings.</p>
+      </div>
+
+      <button id="inspiration">Inspiration</button>
+      <div id="inspirationModal" class="modal2">
+        <div class="inspirationModalContent">
+          <span class="closeInspiration">&times;</span>
+          <p>The inspiration for this game was Cookie Clicker: <a href="https://orteil.dashnet.org/cookieclicker/"</a>Link</p>
+      </div>
       </div>
 
       <button id="contact">Contact Information</button>
-      <div id="contactModal" class="modal"></div>
-      <div class="contactModalContent">
-        <span class="closeContact">x</span>
-        <p>This game was developed by yours truly, Brady Gasser</p>
-        <p>GitHub Link: <a href="https://github.com/bradymgasser"></a></p>
-        <P>Personal Portfolio: <a href="https://bradymgasser.github.io/"></a></p>
+      <div id="contactModal" class="modal3">
+        <div class="contactModalContent">
+          <span class="closeContact">&times;</span>
+          <p>This game was developed by yours truly, Brady Gasser</p>
+          <p>GitHub: <a href="https://github.com/bradymgasser"</a>Link</p>
+          <p>Personal Portfolio: <a href="https://bradymgasser.github.io/"</a>Link</p>
+      </div>
       </div>
     </nav>
   </header>
-  <body>
 
     <main>
       
-      <div class = "container">
+    <div class ="container">
 
     <section id = "donutMakerDisplay">
       <h2>Donut Maker</h2>
-      <button id="donutMakerBtn">Make a Donut</button>
+      <button id="donutMakerBtn"><img id="donnut" src="/images/donnutSmall.jpg"></button>
       <h3>Number of Donuts Made: <span id="newDonutCountDisplay">0</span></h3>
     </section>
 
@@ -51,7 +60,7 @@
       <h3>Auto Clicker Price: <span id="autoClickerGamePrice">100</span></h3>
     </section>
 
-    <section id = "DonutMultipliers">
+    <section id = "donutMultipliers">
       <h2>Donut Multipliers</h2>
       <button id="buyDonutMultiBtn">Buy a Donut Multiplier</button>
       <h3>Number of Donut Multipliers Activated: <span id="donutMultiGameCounter">0</span></h3>
@@ -66,7 +75,6 @@
     </div>
 
     <script type="module" src="./donut-maker-app.js"></script>
-    <!-- <script type="module" src="./donut-maker.js"></script> -->
 
     </main>
   </body>
